@@ -73,6 +73,7 @@ message CreateSessionRequest {
     string ip = 7;
     string data = 8;
     string expires_at = 9;
+    string integration_id = 10;
 }
 
 message UpdateSessionRequest {
