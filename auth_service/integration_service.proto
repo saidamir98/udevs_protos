@@ -15,11 +15,6 @@ service IntegrationService {
     rpc UpdateIntegration(UpdateIntegrationRequest) returns (Integration) {}
     rpc DeleteIntegration(IntegrationPrimaryKey) returns (google.protobuf.Empty) {}
 }
-    
-message UpsertIntegrationInfoRequest {
-    string integration_id = 1;
-    google.protobuf.Struct data = 2;
-}
 
 message CreateIntegrationRequest {
     string project_id = 1;
@@ -30,7 +25,7 @@ message CreateIntegrationRequest {
     int32 active = 6;
     string expires_at = 7;
     string title = 8;
-    google.protobuf.Struct ip_whitelist = 9;
+    string ip_whitelist = 9;
 }
 
 message IntegrationPrimaryKey {
@@ -64,7 +59,7 @@ message UpdateIntegrationRequest {
     int32 active = 6;
     string expires_at = 7;
     string name = 8;
-    google.protobuf.Struct ip_whitelist = 9;
+    string ip_whitelist = 9;
 }
 
 message AddIntegrationRelationRequest {
