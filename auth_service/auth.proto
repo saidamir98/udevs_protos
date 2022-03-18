@@ -170,7 +170,7 @@ message Integration {
     string client_type_id = 4;
     string role_id = 5;
     string secret_key = 6;
-    google.protobuf.Struct ip_whitelist = 7;
+    string ip_whitelist = 7;
     int32 active = 8;
     string expires_at = 9;
     string created_at = 10;
